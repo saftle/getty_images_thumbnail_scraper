@@ -5,7 +5,9 @@ Perfect scraper for AI model training, since you only need around 512x512. The t
 # Installation requirements prior to using:
 
 pip install requests
+
 pip install unidecode
+
 pip install bs4
 
 # How to Use
