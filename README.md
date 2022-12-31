@@ -2,6 +2,9 @@
 
 Perfect scraper for AI model training, since you only need around 512x512. The thumbnails retrieved from gettyimages are close to that size.
 
+This entire script was programmed by ChatGPT (AI Language Model) with a little bit of back and forth debugging also provided by ChatGPT.
+You can try ChatGPT here: https://chat.openai.com/
+
 # Installation requirements prior to using:
 
 ```
