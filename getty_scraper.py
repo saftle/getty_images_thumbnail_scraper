@@ -124,15 +124,10 @@ for search_term in search_terms:
                         # Replace non-ASCII characters with ASCII equivalents
                         alt = unidecode(image['alt'])
 
-                        # Replace invalid characters
-                        alt = re.sub(r'[^\w.:, ]', '_', alt)
-                        alt = re.sub(r'/', ' ', alt)
-                        alt = re.sub(r'_ ', ' ', alt)
-                        alt = re.sub(r'__+', '_', alt)
-                        alt = re.sub(r'_', ' ', alt)
-                        alt = alt.replace('  ', ' ')
-                        alt = alt.replace(':', '_')
-                        alt = alt.rsplit('.', 1)[0]
+                        if ' - ' in alt:
+                            _alt = alt[:alt.rindex(' - ')].strip()
+                            if len(_alt) > 0:
+                                alt = _alt
 
                         name = f"{time.time_ns}.{alt}"
                         name = hashlib.sha256(name.encode()).hexdigest()
